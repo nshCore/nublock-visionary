@@ -8,7 +8,7 @@ const services = [
   {
     icon: <Code className="h-10 w-10 text-primary" />,
     title: 'WEB DEVELOPMENT',
-    description: 'Building responsive, high-performance web applications with modern frameworks and best practices.'
+    description: 'B.'
   },
   {
     icon: <Server className="h-10 w-10 text-primary" />,
@@ -30,28 +30,44 @@ const services = [
 const Services: React.FC = () => {
   return (
     <section className="py-20 px-6 bg-muted/30">
-      <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">OUR SERVICES</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            We offer a comprehensive range of technical services to help your business succeed in the digital landscape.
+
+        <div className="container mx-auto px-6 py-24">
+          <h1 className="text-4xl font-bold mb-8">Our Servcies</h1>
+          <p className="text-xl text-muted-foreground mb-12">
+            Learn more about nublock.tech and our mission.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h2 className="text-2xl font-bold mb-4">WEB DEVELOPMENT</h2>
+              <p className="text-muted-foreground mb-6">
+                Building responsive, high-performance web applications with modern frameworks and best practices
+              </p>
+              <p className="text-muted-foreground">
+                Additional placeholder text about the company's journey.
+              </p>
+            </div>
+            
+            <div className="bg-muted h-64 flex items-center justify-center">
+              <p className="text-muted-foreground">Placeholder for company image</p>
+            </div>
+            
+            <div className="bg-muted h-64 flex items-center justify-center">
+              <p className="text-muted-foreground">Placeholder for team image</p>
+            </div>
+            
+            <div>
+              <h2 className="text-2xl font-bold mb-4">SYSTEM ARCHITECTURE</h2>
+              <p className="text-muted-foreground mb-6">
+                Placeholder for information about the team and expertise.
+              </p>
+              <p className="text-muted-foreground">
+                Additional placeholder text about team members and skills.
+              </p>
+            </div>
+          </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <CardHeader className="pb-2">
-                <div className="mb-4">{service.icon}</div>
-                <CardTitle>{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{service.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+
     </section>
 };
 
