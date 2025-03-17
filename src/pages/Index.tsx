@@ -13,7 +13,7 @@ const Index: React.FC = () => {
     // and then shows the main content
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 3000); // Adjust this timing to match your terminal animation duration
+    }, 6000); // Increased from 3000ms to 6000ms to match the longer terminal animation
     
     return () => clearTimeout(timer);
   }, []);

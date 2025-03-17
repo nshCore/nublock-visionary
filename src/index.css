@@ -124,6 +124,28 @@
   }
 }
 
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 1.5s ease-in-out forwards;
+}
+
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-terminal-blink {
+  animation: terminal-blink 1s infinite;
+}
+
 ::selection {
   @apply bg-primary/30 text-white;
 }

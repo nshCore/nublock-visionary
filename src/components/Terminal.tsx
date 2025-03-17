@@ -78,18 +78,18 @@ const Terminal: React.FC = () => {
         
         // Determine if we should continue adding lines
         if (currentLineIndex < KERNEL_MESSAGES.length) {
-          // Random delay between 50ms and 150ms for natural typing effect
-          const delay = Math.random() * 100 + 50;
+          // Random delay between 70ms and 180ms for a slightly slower typing effect
+          const delay = Math.random() * 110 + 70;
           setTimeout(addLine, delay);
         } else {
           // Boot animation complete
           setTimeout(() => {
             setBootComplete(true);
-            // Begin slide up animation after showing "BOOTING WEBSITE..."
+            // Begin slide up animation after a longer delay after showing "BOOTING WEBSITE..."
             setTimeout(() => {
               setAnimate(true);
-            }, 1500);
-          }, 500);
+            }, 2500); // Increased from 1500ms to 2500ms for a longer pause
+          }, 1000); // Increased from 500ms to 1000ms for a longer pause
         }
       }
     };
@@ -102,6 +102,11 @@ const Terminal: React.FC = () => {
     <div 
       className={`fixed inset-0 z-50 w-full h-screen bg-terminal-bg flex flex-col justify-start items-center overflow-hidden
                  ${animate ? 'animate-slide-up' : ''}`}
+      style={{ 
+        // Adding a custom animation with longer duration
+        '--animation-duration': '1.5s', // Slowing down the animation
+        animationDuration: 'var(--animation-duration)'
+      } as React.CSSProperties}
     >
       <div 
         ref={terminalRef}
