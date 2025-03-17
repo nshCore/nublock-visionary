@@ -1,5 +1,8 @@
 name: Build and Commit Build Output
 
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -11,15 +14,12 @@ on:
 
 jobs:
   build-and-commit:
-    # Run only if not a PR event or the PR was merged.
     if: github.event.pull_request == null || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          # Ensure full history so git can properly commit and push changes.
           fetch-depth: 0
 
       - name: Setup Node.js
