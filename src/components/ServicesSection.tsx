@@ -25,7 +25,7 @@ const services = [
   },
 ];
 
-const Services: React.FC = () => {
+const ServicesSection: React.FC = () => {
   return (
     <section className="py-20 px-6 bg-muted/30">
 
@@ -70,4 +70,4 @@ const Services: React.FC = () => {
     )
 };
 
-export default Services;
+export default ServicesSection;
