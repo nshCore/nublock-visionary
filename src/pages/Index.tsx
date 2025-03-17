@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
-import Services from '../components/ServicesSection';
+import Services from '../components/Services';
 import CTASection from '../components/CTASection';
 
 const Index: React.FC = () => {
@@ -13,7 +13,7 @@ const Index: React.FC = () => {
       
       <main className="flex-grow">
         <HeroSection />
-        <ServicesSection />
+        <Services />
         <CTASection />
       </main>
       
