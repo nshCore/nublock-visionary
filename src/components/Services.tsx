@@ -37,7 +37,7 @@ const Services: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold mb-4">OUR STORY</h2>
+              <h2 className="text-2xl font-bold mb-4">WEB DEVELOPMENT</h2>
               <p className="text-muted-foreground mb-6">
                 Placeholder for company history and background information.
               </p>
@@ -55,12 +55,21 @@ const Services: React.FC = () => {
             </div>
             
             <div>
-              <h2 className="text-2xl font-bold mb-4">OUR TEAM</h2>
+              <h2 className="text-2xl font-bold mb-4">SYSTEM ARCHITECTURE</h2>
               <p className="text-muted-foreground mb-6">
                 Placeholder for information about the team and expertise.
               </p>
               <p className="text-muted-foreground">
                 Additional placeholder text about team members and skills.
+              </p>
+            </div>
+             <div>
+              <h2 className="text-2xl font-bold mb-4">WEB DEVELOPMENT</h2>
+              <p className="text-muted-foreground mb-6">
+                Placeholder for company history and background information.
+              </p>
+              <p className="text-muted-foreground">
+                Additional placeholder text about the company's journey.
               </p>
             </div>
           </div>
