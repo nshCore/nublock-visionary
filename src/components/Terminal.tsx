@@ -100,7 +100,7 @@ const Terminal: React.FC = () => {
 
   return (
     <div 
-      className={`fixed inset-0 z-50 w-full h-screen bg-terminal-bg flex flex-col justify-start items-center overflow-hidden
+      className={`fixed inset-0 z-50 w-full h-screen bg-black flex flex-col justify-start items-center overflow-hidden
                  ${animate ? 'animate-slide-up' : ''}`}
       style={{ 
         // Adding a custom animation with longer duration
@@ -117,10 +117,10 @@ const Terminal: React.FC = () => {
             <span 
               className={`inline-block ${
                 line.includes("NUBLOCK TECH SYSTEM INITIALIZED") ? 
-                'text-terminal-green font-bold text-xl' : 
+                'text-green-500 font-bold text-xl' : 
                 line.includes("BOOTING WEBSITE") ? 
-                'text-terminal-green font-bold text-2xl' : 
-                'text-terminal-green'
+                'text-green-500 font-bold text-2xl' : 
+                'text-green-500'
               }`}
             >
               {line}
@@ -129,7 +129,7 @@ const Terminal: React.FC = () => {
         ))}
         {!bootComplete && (
           <div className="py-0.5">
-            <span className="inline-block text-terminal-green animate-terminal-blink">_</span>
+            <span className="inline-block text-green-500 animate-terminal-blink">_</span>
           </div>
         )}
       </div>

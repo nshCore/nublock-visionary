@@ -24,24 +24,22 @@ const Index: React.FC = () => {
       <Terminal />
       
       {/* Main Content - will be visible after terminal animation */}
-      <div 
-        className={`transition-opacity duration-1000 ease-in-out ${
-          showContent ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        <Navbar />
-        
-        {/* Empty section at the top to ensure content is below the terminal animation */}
-        <div className="h-screen"></div>
-        
-        {/* Main content sections */}
-        <main>
-          <HoldingSection />
-          <HoldingSection />
-        </main>
-        
-        <Footer />
-      </div>
+      {showContent && (
+        <div className="transition-opacity duration-1000 ease-in-out opacity-100">
+          <Navbar />
+          
+          {/* Empty section at the top to push content below the fold */}
+          <div className="h-screen"></div>
+          
+          {/* Main content sections */}
+          <main>
+            <HoldingSection />
+            <HoldingSection />
+          </main>
+          
+          <Footer />
+        </div>
+      )}
     </div>
   );
 };
