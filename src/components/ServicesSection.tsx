@@ -1,5 +1,3 @@
-FIGM
-
 import React from 'react';
 import { Code, Server, Search, Cpu } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
