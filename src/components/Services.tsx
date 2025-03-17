@@ -25,21 +25,21 @@ const services = [
   },
 ];
 
-const ServicesSection: React.FC = () => {
+const Services: React.FC = () => {
   return (
-    <section className="py-20 px-6 bg-muted/30">
-
+    <div className="flex flex-col min-h-screen">
+      <main className="flex-grow pt-20">
         <div className="container mx-auto px-6 py-24">
-          <h1 className="text-4xl font-bold mb-8">Our Servcies</h1>
+          <h1 className="text-4xl font-bold mb-8">ABOUT US</h1>
           <p className="text-xl text-muted-foreground mb-12">
             Learn more about nublock.tech and our mission.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-bold mb-4">WEB DEVELOPMENT</h2>
+              <h2 className="text-2xl font-bold mb-4">OUR STORY</h2>
               <p className="text-muted-foreground mb-6">
-                Building responsive, high-performance web applications with modern frameworks and best practices
+                Placeholder for company history and background information.
               </p>
               <p className="text-muted-foreground">
                 Additional placeholder text about the company's journey.
@@ -55,7 +55,7 @@ const ServicesSection: React.FC = () => {
             </div>
             
             <div>
-              <h2 className="text-2xl font-bold mb-4">SYSTEM ARCHITECTURE</h2>
+              <h2 className="text-2xl font-bold mb-4">OUR TEAM</h2>
               <p className="text-muted-foreground mb-6">
                 Placeholder for information about the team and expertise.
               </p>
@@ -65,9 +65,9 @@ const ServicesSection: React.FC = () => {
             </div>
           </div>
         </div>
-
-    </section>
-    )
+      </main>
+    </div>
+  );
 };
 
-export default ServicesSection;
+export default Services;
