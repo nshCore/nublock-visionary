@@ -69,6 +69,7 @@ const Services: React.FC = () => {
         </div>
 
     </section>
+    )
 };
 
 export default Services;
